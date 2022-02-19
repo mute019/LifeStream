@@ -1,0 +1,36 @@
+#foot_contact{
+   background-color: teal;
+   color: white;
+   padding: 50px;
+   padding-bottom: 70px;
+}
+
+#foot_container{
+   margin: auto;
+}
+
+
+.foot_icon{
+   padding: 15px;
+   font-size: 120%;
+
+}
+
+.foot_address_row{
+   font-weight: 300;
+   display: flex;
+}
+
+
+.fa-map-marker-alt:before{
+   font-size: 150%;
+   content: "\f3c5";
+}
+
+#foot_copyright_details{
+   padding-top: 10px;
+}
+/*-----------------------------CSS For Form.html---------------------------------------------------*/
+#form_body{
+   background-image: url("../Assets/Images/bg1.png");
+}

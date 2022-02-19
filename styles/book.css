@@ -1,0 +1,109 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.book-enclosure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background: url("../Dependencies/images/bg1.png");
+}
+
+.Booking-section {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 24px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 340px;
+    margin: 0px;
+    border-radius: 10px;
+    background-color: azure;
+}
+
+
+
+.Booking-section h1 {
+    font-weight: bold;
+    color: orangered;
+}
+
+.Booking-section p {
+    padding-left: 2px;
+}
+
+.Booking-section form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+
+.Booking-section form input[type=text], input[type=date] {
+    height: 40px;
+    width: 320px;
+    margin: 10px 0px;
+    padding: 0px 5px;
+    border: 2px solid cornflowerblue;
+}
+
+.Booking-section form input[type=text], input[type=date] {
+    
+    border-radius: 6px;
+}
+
+.Booking-section form input[type=date] {
+    width: 160px;
+}
+
+input[type=submit] {
+    height: 40px;
+    width: 320px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+}
+
+input[type=submit]:hover {
+    color: white;
+    background-color: limegreen;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+}
+
+select {
+    margin: 5px 0px;
+    height: 40px;
+}
+
+/* 
+    Media Queries
+*/
+
+@media screen and (min-width: 400px) {
+
+    .Booking-section {
+        width: 400px;
+        padding: 40px;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+@media screen and (min-width: 1080px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
+    
+    .Booking-section {
+        margin: 0px;
+    }
+
+}
