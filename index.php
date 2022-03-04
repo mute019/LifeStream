@@ -1,16 +1,21 @@
 <?php 
     require_once "./includes/header.php" 
 ?>
+
+<!-- Welcome Section -->
             <section class="welcome">
                 <h3>
                     Welcome, 
                     <?php 
+                        //Session variable is checked here
                         if (isset($_SESSION['username'])) {
                             echo $_SESSION['username'];
                         }
                      ?>
                 </h3>
             </section>
+
+            <!-- About Section -->
             <section class="abt-container">
                 <div class="abt-enc">
                     <div class= "abt-desc">
@@ -18,7 +23,7 @@
                         <h1>
                             About Life <span>Stream</span>
                         </h1>
-                        
+                        <!-- Main Paragraph -->
                         <p>
                             <b>
                             "A drop of blood can save a life! Don't waste it and donate blood."
@@ -42,12 +47,15 @@
                             The body replaces this volume within 24 to 48 hours, and replenishes red blood cells in 10 to 12 weeks.
                         </p>
                     </div>
+                    <!-- About Section Images -->
                     <div class="abt-img">
                         <img 
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Fblood-donation-illustration-id164551334%3Fk%3D6%26m%3D164551334%26s%3D612x612%26w%3D0%26h%3DhZ3nZoETKBBjjj7wwsdAcqcNH6vek0D21dL6evFarQQ%3D&f=1&nofb=1" alt="blood-pic">
+                        src="https://cdni.iconscout.com/illustration/premium/thumb/blood-donation-3142071-2621400.png" alt="blood-pic">
                     </div>
                 </div>
             </section>
+
+            <!-- Gallery Section -->
 
             <section class="gallery-container-section">
                 <div>
@@ -95,6 +103,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Donation Process Definitions -->
 
             <section class="donation-process-section">
                 <div class="donation-process-container">

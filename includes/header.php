@@ -1,5 +1,5 @@
 <?php
-
+    //session starts here
     session_start();
 
 ?>
@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Linking of CSS and Meta data is defined here -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@
         <title>LifeStream</title>
     </head>
     <body>
+        <!-- Navigation Section -->
         <nav>           
             <div class="header-container">
                 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngitem.com%2Fpimgs%2Fm%2F49-492638_blood-vector-blood-drop-hd-png-download.png&f=1&nofb=1"
@@ -40,6 +42,7 @@
                             <ul class="menu-content" id="menu-list">
                                 <li><a href="./index.php">Home</a></li>
                                 <?php 
+                                    //Checking whether the session variable is set
                                     if (isset($_SESSION['logged-in'])) {
                                         echo "<li><a href='./profile.php'>Profile</a></li>";
                                         echo "<li><a href='./book.php'>Book</a></li>";

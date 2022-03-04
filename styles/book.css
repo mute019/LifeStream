@@ -1,8 +1,12 @@
+/*Reset is applied*/
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
+/* Main container */
 
 .book-enclosure {
     display: flex;
@@ -33,6 +37,8 @@
 .Booking-section p {
     padding-left: 2px;
 }
+
+/* Forms under the container is modified here */
 
 .Booking-section form{
     display: flex;
@@ -90,14 +96,6 @@ select {
         padding: 40px;
     }
 
-}
-
-@media screen and (min-width: 800px) {
-
-}
-
-@media screen and (min-width: 1080px) {
-    
 }
 
 @media screen and (min-width: 1280px) {

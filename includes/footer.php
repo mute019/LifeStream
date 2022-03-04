@@ -1,7 +1,9 @@
 </main>
+    <!-- Footer Section -->
 
         <footer id='foot_contact'>
             <div id='foot_container'>
+                <!-- Contact -->
                 <h2>Contact Information</h2>
                 <div class='foot_address_row'>
                     <div class='foot_icon'>
@@ -11,7 +13,7 @@
                         <p>50, Camac St, Salt Lake,<br> West bengal, Kolkata - 700017</p>
                     </div>
                 </div>
-
+                <!-- Email Section -->
                 <div class='foot_address_row'>
                     <div class="foot_icon">
                         <i class="fas fa-envelope"></i>
@@ -20,13 +22,13 @@
                         <p>support@LifeStream.com</p>
                     </div>
                 </div>
-
+                <!-- Phone Section -->
                 <div class='foot_address_row'>
                     <div class='foot_icon'>
                         <i class="fas fa-phone"></i>
                     </div>
                     <div class="foot_detail">
-                        <p>+91 22426217</p>
+                        <p>+91-33021233</p>
                     </div>
                 </div>
                 
@@ -40,10 +42,14 @@
         </footer>
         
     </body>
+
+    <!-- All scripts are connected or defined here -->
     <script>
+        //user name in the name is set here
         document.querySelector('#donor').value = "<?php echo $_SESSION['username']; ?>";
     </script>
     <script>
+        //all the user dashboard values are set from here
         document.querySelector('input[name = "usrfullname"]').value = "<?php echo $_SESSION['username']; ?>";
         document.querySelector('input[name = "usremail"]').value = "<?php echo $_SESSION['email']; ?>";
         document.querySelector('input[name = "ph_number"]').value = "<?php echo $_SESSION['contact_number']; ?>";

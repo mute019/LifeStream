@@ -1,4 +1,7 @@
-<?php require_once "./includes/header.php"; ?>
+<?php 
+    require_once "./includes/header.php"; 
+?>
+<!-- Main Booking Section -->
 <div class="book-enclosure">
     <div class="Booking-section">
         <article>
@@ -7,15 +10,23 @@
                     Fill up the given form carefully  
                 </p>
         </article>
+        <!-- Form starts here -->
         <form action="./includes/bookingForm.php" method="POST">
+
             <label for="relation">Relation</label>
             <select name="relation" id="relation" onchange = "rel(this.value);">
                 <option value="Self">Self</option>
                 <option value="Family">Family</option>
             </select> 
+
+            <!-- Date Picker Here -->
+
             <label for="date-picker">Pick a Date</label>
             <input type="date" name="date-picker" required>
             <label for="gender">Pick Your Gender</label>
+
+            <!-- Gender Selector Here -->
+
             <select name="gender" id="gender">
                 <option value="">Select Gender</option>
                 <option value="Female">Female</option>
@@ -24,8 +35,10 @@
             </select> 
             
             <input type="text" name="name" id="donor" readonly>
-
             <input type="text" name="id-type" id="" placeholder="Adhaar Number">
+
+            <!-- Blood Group Selector Here -->
+
             <label for="bloodgroup">Blood Group</label>
             <select name="bloodgroup" id="bloodgroup">
                 <option value="">Select Blood Group</option>
@@ -35,10 +48,16 @@
                 <option value="AB-">AB-</option>
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
-                </select> 
-                <input type="submit" name="submit" value="Book">
+            </select>
+
+            <!-- Submit Button -->
+
+            <input type="submit" name="submit" value="Book">
         </form>
+
         <div class="err-handler-container">
+            <!-- Any related errors are caught here and displayed when triggered -->
+
             <?php
                 if (isset($_GET["error"])){
                     if($_GET["error"] == "invldInput") {
@@ -78,4 +97,6 @@
 </div>
     
 
-<?php require_once "./includes/footer.php"; ?>
+<?php 
+    require_once "./includes/footer.php"; 
+?>

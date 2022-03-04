@@ -94,6 +94,8 @@ if(isset($_POST["submit"])){
         exit();
     }
 
+    //if all the tests are passed then entry is made here
+
     if($name_OK == TRUE && $age_OK == TRUE && $address_OK == TRUE && $email_OK == TRUE && $pass_OK == TRUE && $contact_OK == TRUE){
         // echo "<h1>$full_name have successfully created your account</h1><br>";
         // $href = sprintf('href="%s"', "./login.php"); // here give the file path of "index.html" of the website

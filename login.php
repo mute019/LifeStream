@@ -2,21 +2,31 @@
 
 <div class="enclosure">
   <div class="login-form">
+    <!-- Form starts here -->
     <form action="./includes/loginForm.php" method="POST" >
       <h1>Login</h1>
       <div class="content">
+
+      <!-- input fields are here -->
+
         <div class="input-field">
           <input type="email" name="email" placeholder="Email" autocomplete="nope" required>
         </div>
+
         <div class="input-field">
           <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
         </div>
         <a href="#" class="link">Forgot Password?</a>
       </div>
+
+      <!-- Login button -->
+
       <div class="action">
         <button onclick="location.href='./pages/form.php';">Register</button>
         <button type="submit" name="submit">Sign in</button>
       </div>
+
+      <!-- Checking for appropriate errors and displaying them when triggered -->
       <div class="status">
           <?php 
               if (isset($_GET["status"])){

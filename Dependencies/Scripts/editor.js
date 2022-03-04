@@ -1,3 +1,5 @@
+//All the function for user dashboard event check is done here
+
 function nameEdit(){
     console.log("I'm here");
     document.querySelector('input[name=usrfullname]').removeAttribute("readonly");

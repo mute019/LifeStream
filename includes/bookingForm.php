@@ -2,9 +2,12 @@
 
 include_once (__DIR__."/dbconnec.php");
 include_once (__DIR__."/entry_func.php");
+//checking whether submit button is pressed/set.
 
 if (isset($_POST['submit'])){
+    //Initiating Session
     session_start();
+    //Fetching data from POST method
     $relation = $_POST['relation'];
     $date = $_POST['date-picker'];
     $gender = $_POST['gender'];
@@ -13,7 +16,11 @@ if (isset($_POST['submit'])){
     $blood_group = $_POST['bloodgroup'];
     $email = $_SESSION['email'];
 
+    //debugging here
+
     echo "<script>console.log(\"Email: .$email.\")</script>";
+
+    //checking inputs and their sanitation
 
     if(invalidField($donor_name, $gender, $identity)) {
         $conn->close();
@@ -51,8 +58,12 @@ if (isset($_POST['submit'])){
         exit();
     }
 
+    //if everything goes well and input is sanitised then entry is created
+
     createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email);
+    //db connection is closed here
     $conn->close();
+    //redirected to the booking page
     header("location: ../book.php?status=success");
     
 }

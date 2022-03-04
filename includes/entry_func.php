@@ -1,4 +1,5 @@
 <?php
+    //making entry to the registration table 'regis'
     function createEntry($conn, $full_name, $age, $email, $address, $pass, $usr_cont) {
         $sql = "Insert into regis (full_name, age, email, address, passwd, contact_number) value(?, ?, ?, ?, ?, ?);";
         $stmt = $conn->stmt_init();
@@ -6,6 +7,8 @@
         $stmt->bind_param('ssssss', $full_name, $age, $email, $address, $pass, $usr_cont);
         $stmt->execute();
     }
+
+    // checking whether the donor exists or not
 
     function donorExists($conn, $identity){
         $sql = "SELECT * from book where adhaar_id = ?;";
@@ -21,6 +24,8 @@
         return false;
     }
 
+    //checking for existing 'email' entry 
+
     function donorEmailExists($conn, $identity){
         $sql = "SELECT * from book where email = ?;";
         $stmt = $conn->stmt_init();
@@ -35,6 +40,8 @@
         return false;
     }
 
+    // making entry to the 'book' table
+
     function createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email) {
         $sql = "Insert into book(relation, book_date, gender, donor_name, adhaar_id, blood_group, email) values(?, ?, ?, ?, ?, ?, ?);";
         $stmt = $conn->stmt_init();
@@ -42,6 +49,8 @@
         $stmt->bind_param('sssssss', $relation, $date, $gender, $donor_name, $identity, $blood_group, $email);
         $stmt->execute();
     }
+
+    // checking whether the user is already registerd
 
     function usrExists($conn, $email){
         $sql = "SELECT * from regis where email = ?;";
@@ -57,6 +66,8 @@
         return false;
     }
 
+    // fetching data from 'regis' table
+
     function datafetch($conn, $email) {
         $sql="select * from regis where email = '$email';";
         $result = $conn->query($sql);
@@ -65,6 +76,8 @@
             return $result->fetch_assoc();
         }
     }
+
+    //all the sanition and error function definitions
 
     function invalidField($donor_name, $gender, $identity) {
         if(empty($donor_name) && empty($gender) && empty($identity)) {
@@ -98,6 +111,8 @@
         }
     }
 
+    // this check when 'self''s fullname is updated 
+
     function nameCheck($conn, $data, $key) {
         $sql = "SELECT * from book where email = ? and relation = 'Self';";
         $stmt = $conn->stmt_init();
@@ -111,6 +126,8 @@
         }
         return false;
     }
+
+    // All the updation functions of the user dashboard exist here
 
     function nameUpdate($conn, $data, $key) {
         $sql = "

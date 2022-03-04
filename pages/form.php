@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang = 'en-us'>
 
+    <!-- Registration Form -->
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +17,19 @@
                 <legend>:Donor Details:</legend>
                 <label for="flname">FULL NAME:</label><br>
                 <input type="text" id="flname" name="flname" placeholder="Enter your full name" required><br><br>
+
                 <label for="age"></label>AGE:<br>
                 <input type="text" id="age" name="age" placeholder="Enter your age" required><br><br>
+
                 <label for="email">EMAIL:</label><br>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
                 <label for="address">ADRRESS:</label><br>
                 <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
                 <label for="address">CONTACT NUMBER:</label><br>
                 <input type="text" id="cont_number" name="cont_number" placeholder="Enter your number" required><br><br>
+
                 <label for="address">PASSWORD:</label><br>
                 <input type="password" id="passwrd" name="passwrd" placeholder="Enter your password" required><br><br>
 
@@ -32,6 +39,9 @@
 
                 <input type="submit" name="submit" value="Submit">
                 <br><br>
+                
+                <!-- Any related errors are caught here and displayed when triggered -->
+
                 <?php
                         if (isset($_GET["error"])){
                             if($_GET["error"] == "empty") {
@@ -68,7 +78,7 @@
 
                         }
 
-                        ?>
+                ?>
                 <br><br>    
 
             </fieldset>

@@ -1,8 +1,13 @@
+//status check
+
 const elem = document.querySelector(".menu-bttn");
 const closeElem = document.querySelector(".close-btn");
 
 const navElem = document.querySelector(".nav-items");
 
+//Event handler functions are defined here
+
+// draw button
 elem.addEventListener('touch', () => {
     if (!navElem.classList.contains("nav-slide-open") && navElem.classList.contains("nav-slide-hide")){
         navElem.classList.remove("nav-slide-hide");
@@ -19,6 +24,7 @@ elem.addEventListener('click', () => {
     elem.style.visibility = 'hidden';
 });
 
+// close button 
 closeElem.addEventListener('click', () => {
     if (navElem.classList.contains("nav-slide-open") && !navElem.classList.contains("nav-slide-hide")){
         navElem.classList.remove("nav-slide-open");

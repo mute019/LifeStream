@@ -24,7 +24,7 @@ input {
 	border: none;
 }
 
-button {
+.profile-class button {
 	height: 30px;
 	width: 80px;
 	background-color: lightgreen;
