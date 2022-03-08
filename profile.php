@@ -197,13 +197,15 @@
             <div>
                 <h1>Booking Details</h1>
             </div>
-            <table>
+            <table class="table-sec-tab">
                 <thead>
                     <th> Donor's Name </th>
                     <th> Gender </th>
                     <th> Date </th>
                     <th> Adhaar_ID </th>
                     <th> Blood Group </th>
+                    <th> Venue </th>
+                    <th> Time </th>
                     <th> Delete Record </th>
                 </thead>
                 <tbody>
@@ -225,6 +227,33 @@
                                 <td><?php echo $row['book_date'];?></td>
                                 <td><?php echo $row['adhaar_id'];?></td>
                                 <td><?php echo $row['blood_group'];?></td>
+                                <td><?php 
+                                    if ($row['location'] == "L012"){
+                                        echo "Jadavpur";
+                                    }
+
+                                    if ($row['location'] == "L013"){
+                                        echo "Tollygunge";
+                                    }
+
+                                    if ($row['location'] == "L014"){
+                                        echo "Garia";
+                                    }
+
+                                    if ($row['location'] == "L015"){
+                                        echo "Ballygunge";
+                                    }
+
+                                    if ($row['location'] == "L016"){
+                                        echo "Bidhannagar";
+                                    }
+
+                                    if ($row['location'] == "L017"){
+                                        echo "Barrackpore";
+                                    }
+                                
+                                ?></td>
+                                <td><?php echo $row['book_time'];?></td>
                                 <td><a href="./includes/del_entry.php?q=<?php echo $row['adhaar_id']; ?>">Delete</a></td>
                     
                     <?php 

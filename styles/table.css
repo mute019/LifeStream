@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
-    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2919299.jpg&f=1&nofb=1);
+    /* background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2919299.jpg&f=1&nofb=1); */
 }
 
 .table-sec div {
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.table-sec table {
+/* .table-sec table {
     padding: 100px;
 }
 
@@ -27,4 +27,28 @@
 
 .table-sec tr {
     text-align: center;
+} */
+
+
+.table-sec-tab {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.table-sec-tab td, .table-sec-tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+.table-sec-tab tr:nth-child(even){background-color: #f2f2f2;}
+  
+.table-sec-tab tr:hover {background-color: #ddd;}
+  
+.table-sec-tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #de1f26;
+    color: white;
 }

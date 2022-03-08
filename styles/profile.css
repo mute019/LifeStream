@@ -35,3 +35,7 @@ button:hover {
 	background-color: rgb(100, 168, 100);
 	transition: background-color ease-in-out 0.3s;
 }
+
+.err-handler {
+	color:red;
+}
