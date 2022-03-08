@@ -14,6 +14,8 @@ if (isset($_POST['submit'])){
     $donor_name = $_POST['name'];
     $identity = $_POST['id-type'];
     $blood_group = $_POST['bloodgroup'];
+    $book_time = $_POST['time'];
+    $camp_location = $_POST['location'];
     $email = $_SESSION['email'];
 
     //debugging here
@@ -52,15 +54,31 @@ if (isset($_POST['submit'])){
         exit();
     }
 
+    if(empty($blood_group)) {
+        header("location: ../book.php?error=selBlood");
+        exit();
+    }
+
+    if(empty($book_time)) {
+        header("location: ../book.php?error=pickTime");
+        exit();
+    }
+
+    if(empty($camp_location)) {
+        header("location: ../book.php?error=pickLocation");
+        exit();
+    }
+
     if(donorExists($conn, $identity)) {
         $conn->close();
         header("location: ../index.php?error=exists");
         exit();
     }
 
+
     //if everything goes well and input is sanitised then entry is created
 
-    createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email);
+    createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email, $camp_location, $book_time);
     //db connection is closed here
     $conn->close();
     //redirected to the booking page

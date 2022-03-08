@@ -55,7 +55,6 @@
         document.querySelector('input[name = "ph_number"]').value = "<?php echo $_SESSION['contact_number']; ?>";
         document.querySelector('input[name = "usraddress"]').value = "<?php echo $_SESSION['address']; ?>";
         document.querySelector('input[name = "usr_age"]').value = "<?php echo $_SESSION['age']; ?>";
-          
     </script>
     <script src="./Dependencies/Scripts/menubtn.js"></script>
     <script src="./Dependencies/Scripts/navbar.js"></script>

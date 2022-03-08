@@ -42,11 +42,11 @@
 
     // making entry to the 'book' table
 
-    function createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email) {
-        $sql = "Insert into book(relation, book_date, gender, donor_name, adhaar_id, blood_group, email) values(?, ?, ?, ?, ?, ?, ?);";
+    function createDonor($conn, $relation, $date, $gender, $donor_name, $identity, $blood_group, $email, $camp_location, $book_time) {
+        $sql = "Insert into book(relation, book_date, gender, donor_name, adhaar_id, blood_group, email, location, book_time) values(?, ?, ?, ?, ?, ?, ?, ?, ?);";
         $stmt = $conn->stmt_init();
         $stmt->prepare($sql);
-        $stmt->bind_param('sssssss', $relation, $date, $gender, $donor_name, $identity, $blood_group, $email);
+        $stmt->bind_param('sssssssss', $relation, $date, $gender, $donor_name, $identity, $blood_group, $email, $camp_location, $book_time);
         $stmt->execute();
     }
 
